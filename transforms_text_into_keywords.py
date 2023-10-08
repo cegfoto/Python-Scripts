@@ -11,7 +11,7 @@ removeSentences = [
     "under"
 ]
 
-text = input("Input the text")
+text = input("Input the text:")
 text = text.replace(',', '')
 text = text.replace('.', '')
 listText = text.split(' ')
