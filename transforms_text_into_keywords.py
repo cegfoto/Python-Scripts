@@ -311,7 +311,6 @@ compoundWords = [
 	"ground beef",
 	"vegetable food"
 ];
-# to test: bell pepper in the table of the dinner with food and rice and plant
 
 def getWordsFromTitle(text):
 	text = text.replace(',', '')
@@ -344,8 +343,9 @@ def associateKeywords(arrayText):
 
 loop = 1
 while loop:
-	#text = input("Input the text:")
-	text = 'bell pepper in the table of the dinner with food and rice and plant'
+	text = input("Input the text:")
+	#to test:
+	#text = 'bell pepper in the table of the dinner with food and rice and plant' 
 	if not text:
 		loop = 0
 		continue
