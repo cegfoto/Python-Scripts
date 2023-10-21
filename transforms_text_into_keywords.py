@@ -11,7 +11,12 @@ removeSentences = [
 	"under",
 	"selective",
 	"over",
-	"against"
+	"against",
+	"down",
+	"known",
+	"as",
+	"amid",
+	"amidst"
 ]
 
 genericKeywords = {
@@ -36,6 +41,16 @@ genericKeywords = {
 		"biology",
 		"seasonal",
 		"organic"
+	],
+	"plants": [
+		"flora",
+		"nature",
+		"natural",
+		"botany",
+		"biology",
+		"seasonal",
+		"organic",
+		"plant"
 	],
 	"sky": [
 		"air",
@@ -66,9 +81,7 @@ genericKeywords = {
 		"cloud"
 	],
 	"meat": [
-		"protein",
-		"animal",
-		"dead"
+		"protein"
 	],
 	"dairy": [
 		"food",
@@ -123,12 +136,22 @@ genericKeywords = {
 		"wild",
 		"biology",
 		"habitat",
-		"enviroment",
+		"environment",
 		"organic"
 	],
 	"falling": [
 		"movement",
 		"fall"
+	],
+	"trees": [
+		"nature",
+		"natural",
+		"plant",
+		"flora",
+		"biology",
+		"seasonal",
+		"wood",
+		"tree"
 	],
 	"tree": [
 		"nature",
@@ -189,8 +212,6 @@ genericKeywords = {
 	],
 	"fruit": [
 		"agriculture",
-		"vegetarian",
-		"vegan",
 		"nutrition",
 		"natural",
 		"organic",
@@ -200,8 +221,6 @@ genericKeywords = {
 	],
 	"vegetable food": [
 		"agriculture",
-		"vegetarian",
-		"vegan",
 		"nutrition",
 		"natural",
 		"organic",
@@ -214,7 +233,13 @@ genericKeywords = {
 		"animal",
 		"fauna",
 		"biology",
-		"birds",
+		"birdwatching"
+	],
+	"birds": [
+		"animal",
+		"fauna",
+		"biology",
+		"bird",
 		"birdwatching"
 	],
 	"sauce": [
@@ -286,7 +311,7 @@ compoundWords = [
 	"ground beef",
 	"vegetable food"
 ];
-# bell pepper in the table of the dinner with food and rice and plant
+# to test: bell pepper in the table of the dinner with food and rice and plant
 
 def getWordsFromTitle(text):
 	text = text.replace(',', '')
@@ -319,7 +344,8 @@ def associateKeywords(arrayText):
 
 loop = 1
 while loop:
-	text = input("Input the text:")
+	#text = input("Input the text:")
+	text = 'bell pepper in the table of the dinner with food and rice and plant'
 	if not text:
 		loop = 0
 		continue
@@ -332,5 +358,6 @@ while loop:
 	option = input("Do you want to add keywords associated with the words in the title?")
 	if option:
 		arrayText = associateKeywords(arrayText)
+	arrayText.append('nobody')
 	print(';'.join(arrayText))
 print('operação finalizada')
