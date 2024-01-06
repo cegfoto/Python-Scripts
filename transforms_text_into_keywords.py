@@ -273,7 +273,6 @@ genericKeywords = {
 		"cook",
 		"dish",
 		"meal",
-		"dish",
 		"gourmet",
 		"tasty",
 		"lunch",
@@ -309,7 +308,8 @@ compoundWords = [
 	"close up",
 	"bell pepper",
 	"ground beef",
-	"vegetable food"
+	"vegetable food",
+	"passion fruit"
 ];
 
 def getWordsFromTitle(text):
