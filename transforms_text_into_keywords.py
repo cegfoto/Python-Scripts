@@ -16,7 +16,12 @@ removeSentences = [
 	"known",
 	"as",
 	"amid",
-	"amidst"
+	"amidst",
+	"focus",
+	"to",
+	"at",
+	"used",
+	"for"
 ]
 
 genericKeywords = {
@@ -299,6 +304,9 @@ genericKeywords = {
 		"space",
 		"universe",
 		"crater"
+	],
+	"black and white": [
+		"gray"
 	]
 }
 
@@ -309,7 +317,14 @@ compoundWords = [
 	"bell pepper",
 	"ground beef",
 	"vegetable food",
-	"passion fruit"
+	"passion fruit",
+	"black and white",
+	"looking up",
+	"ground meat",
+	"cherry tomato",
+	"Ground beef",
+	"straw potatoes",
+	"straw potato"
 ];
 
 def getWordsFromTitle(text):
@@ -345,7 +360,7 @@ loop = 1
 while loop:
 	text = input("Input the text:")
 	#to test:
-	#text = 'bell pepper in the table of the dinner with food and rice and plant' 
+	#text = 'bell pepper in the table of the dinner with food and rice and plant in black and white' 
 	if not text:
 		loop = 0
 		continue
@@ -355,9 +370,7 @@ while loop:
 	text = text.strip()
 	listText = getWordsFromTitle(text)
 	arrayText = arrayText + listText
-	option = input("Do you want to add keywords associated with the words in the title?")
-	if option:
-		arrayText = associateKeywords(arrayText)
+	arrayText = associateKeywords(arrayText)
 	arrayText.append('nobody')
 	print(';'.join(arrayText))
 print('operação finalizada')
